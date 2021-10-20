@@ -7,15 +7,31 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-// criando a tabela Users
 model User {
-  id String @id @default(uuid())
-  name String
-  github_id Int
+  id         String @id @default(uuid())
+  name       String
+  github_id  Int
   avatar_url String
-  login String
+  login      String
 
   @@map("users")
+  Message Message[]
 }
 
-//yarn prisma migrate dev
+model Message {
+  id        String   @id @default(uuid())
+  text     String
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [user_id], references: [id])
+
+  user_id String
+  @@map("messages")
+}
+
+//  yarn prisma migrate dev
+//  yarn prisma migrate reset
+
+// criando a tabela Users
+//parâmetro opcional exemplo:
+//escolaridade? -- sem a interrogação é sempre dado obrigatório
