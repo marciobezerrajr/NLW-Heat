@@ -13,7 +13,7 @@ model User {
   github_id  Int
   avatar_url String
   login      String
-  
+
   messages Message[]
   @@map("users")
 }
@@ -28,10 +28,3 @@ model Message {
   user_id String
   @@map("messages")
 }
-
-//  yarn prisma migrate dev
-//  yarn prisma migrate reset
-
-// criando a tabela Users
-//parâmetro opcional exemplo:
-//escolaridade? -- sem a interrogação é sempre dado obrigatório

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import prismaClient from '../prisma/index'
+import prismaClient from '../prisma'
 import { sign, Secret } from 'jsonwebtoken'
 
 interface IAcessTokenResponse {
