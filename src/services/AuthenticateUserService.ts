@@ -63,7 +63,8 @@ class AuthenticateUserService {
                     avatar_url: user.avatar_url,
                     id: user.id
                 }
-            }, process.env.JWT_KEY as Secret,
+            },
+                process.env.JWT_KEY as Secret,
             {
                 subject: user.id,
                 expiresIn: '1d'

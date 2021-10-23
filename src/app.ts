@@ -25,8 +25,8 @@ io.on('connection', (socket) => {
 app.use(express.json())
 app.use(router)
 
-app.get('/github', (req, res) => {
-    res.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
+app.get('/github', (req, res) => {                          //${process.env.GITHUB_CLIENT_ID}
+    res.redirect(`https://github.com/login/oauth/authorize?client_id=c5301cef96d00e46c41f`)
 })
 
 app.get('/signin/callback', (req, res) => {
