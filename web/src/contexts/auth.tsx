@@ -38,7 +38,6 @@ export const AuthProvider = (props: AuthProvider) => {
     const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=c5301cef96d00e46c41f`
 
     const signIn = async (githubCode: string) => {
-
         const response = await api.post<AuthResponse>("authenticate", {
             code: githubCode
         })
@@ -61,6 +60,7 @@ export const AuthProvider = (props: AuthProvider) => {
         const token = localStorage.getItem("@dowhile:token")
 
         if (token) {
+            //toda requisição vai com o token no cabeçalho a partir dessa linha
             api.defaults.headers.common.authorization = `Bearer ${token}`
 
             api.get<User>("profile").then(response => {
@@ -71,11 +71,12 @@ export const AuthProvider = (props: AuthProvider) => {
 
     useEffect(() => {
         const url = window.location.href
-        const hasGithubCode = url.includes("?code=")
+        const hasGithubCode = url.includes('?code=')
+        // console.log(hasGithubCode)
 
         if (hasGithubCode) {
-            const [urlWithoutCode, githubCode] = url.split("?code=")
-
+            const [urlWithoutCode, githubCode] = url.split('?code=')
+            // console.log({urlWithoutCode,githubCode})
             window.history.pushState({}, "", urlWithoutCode)
 
             signIn(githubCode)
@@ -88,3 +89,4 @@ export const AuthProvider = (props: AuthProvider) => {
         </AuthContext.Provider>
     )
 }
+

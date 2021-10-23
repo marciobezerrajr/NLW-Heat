@@ -19,7 +19,7 @@ class AuthenticateUserService {
         const url = 'https://github.com/login/oauth/access_token'
 
         //nomeando a variavel data 
-        const { data: acessTokenResponse } = await axios.post<IAcessTokenResponse>(url, null, {
+        const { data } = await axios.post<IAcessTokenResponse>(url, null, {
             params: {
                 client_id: process.env.GITHUB_CLIENT_ID,
                 client_secret: process.env.GITHUB_CLIENT_SECRET,
@@ -33,7 +33,7 @@ class AuthenticateUserService {
 
         const response = await axios.get<IUserResponse>('https://api.github.com/user', {
             headers: {
-                authorization: `Bearer ${acessTokenResponse.access_token}`
+                authorization: `Bearer ${data.access_token}`
             }
         })
 
@@ -64,13 +64,13 @@ class AuthenticateUserService {
                     id: user.id
                 }
             },
-                process.env.JWT_KEY as Secret,
+            process.env.JWT_KEY as Secret,
             {
                 subject: user.id,
                 expiresIn: '1d'
             })
 
-        return {token, user}
+        return { token, user }
     }
 }
 

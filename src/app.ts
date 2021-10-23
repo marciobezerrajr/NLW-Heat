@@ -31,7 +31,6 @@ app.get('/github', (req, res) => {                          //   c5301cef96d00e4
 
 app.get('/signin/callback', (req, res) => {
     const {code} = req.query
-
     return res.json(code)
 })
 

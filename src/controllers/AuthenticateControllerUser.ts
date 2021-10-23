@@ -4,7 +4,8 @@ import { AuthenticateUserService } from '../services/AuthenticateUserService'
 class AuthenticateUserController {
     async handle(req: Request, res: Response) {
 
-        const { code } = req.body
+        const {code} = req.body
+
         const service = new AuthenticateUserService()
 
         try {
