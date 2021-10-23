@@ -11,7 +11,7 @@ export function ensureAuthenticated(req: Request, res: Response, next: NextFunct
 
     if(!authToken){
         return res.status(401).json({
-            errorCode: 'token.invalid'
+            errorCode: 'token inválido'
         })
     }
 
@@ -23,9 +23,10 @@ export function ensureAuthenticated(req: Request, res: Response, next: NextFunct
     try{
         const {sub} = verify(token, process.env.JWT_KEY as Secret) as IPayload
         req.user_id = sub 
+        
         return next()
 
     } catch(err) {
-        return res.status(401).json({ errorCode: "token.expired"})
+        return res.status(401).json({ errorCode: "token expirado"})
     }
 }

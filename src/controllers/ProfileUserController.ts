@@ -13,4 +13,4 @@ class ProfileUserController {
     }
 }
 
-export {ProfileUserController }
+export {ProfileUserController}

@@ -10,4 +10,4 @@ class GetLast3MessagesController {
         return res.json(result)
     }
 }
-export {GetLast3MessagesController }
+export {GetLast3MessagesController}

@@ -11,7 +11,7 @@ class AuthenticateUserController {
             const result = await service.execute(code)
             return res.json(result)
         } catch (err) {
-            return res.json({ error: err });
+            return res.json({ error: err })
         }
     }
 }

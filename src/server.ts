@@ -1,3 +1,3 @@
 import { serverHttp } from "./app";
 
-serverHttp.listen(4000, () => {console.log('server on')})
+serverHttp.listen(4000, () => console.log(' ✈️  server on ✈️'))
