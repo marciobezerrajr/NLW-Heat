@@ -11,7 +11,6 @@ import { useAuth } from '../../hooks/auth'
 import { styles } from "./styles";
 
 
-
 export function Home() {
 
     const { user } = useAuth()

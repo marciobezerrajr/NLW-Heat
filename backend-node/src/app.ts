@@ -4,7 +4,7 @@ import express from 'express'
 import http from 'http'
 import cors from 'cors'
 
-import {router} from '../routes'
+import {router} from './routes'
 import {Server} from 'socket.io'
 
 const app = express()
@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
 app.use(express.json())
 app.use(router)
 
-app.get('/github', (req, res) => {                          //   c5301cef96d00e46c41f
+app.get('/github', (req, res) => {                          
     res.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
 })
 
