@@ -26,12 +26,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 > Obs.: Nesse projeto temos autenticação via OAuth com o GitHub toda feita no backend. Alem disso, o backend é responsável por trazer os dados do banco SqLite, que serão renderizados. [Acesse aqui o backend-node](https://github.com/marciobezerrajr/NLW-Heat/tree/main/backend-node.)
 
 - Clone o repositório e acesse a pasta;
-- Faça uma copia do arquivo `.env.example` para `.env` e preencha com as suas credenciais do GitHub;
 - Instale as dependências com `yarn`;
 - Inicie o servidor do backend via `yarn dev`.
-- Inicie a aplicação com o comando `Expo Start. - Você pode iniciar a aplicação através de um emulador android ou pode realizar o download do Expo Go para seu smartphone e fazer  leitura do qrcode gerado com o smartphone para começar a rodar a aplicação.
+- Inicie a aplicação com o comando `expo start`. - Você pode iniciar a aplicação através de um emulador android ou pode realizar o download do aplicativo "Expo Go" para seu smartphone e fazer a leitura do qrcode gerado pela aplicação com o smartphone para começar a rodar a aplicação.
 
-Obs: Caso tenha problema paga rodar a aplicação com o Expo Go,através da rede Lan ou da Local, provavelmente o problema se trada do firewall, então é só liberar a porta na qual o expo startou (no meu caso porta 19000 e 19001) nos protocolos TCP e UDP e ser feliz :D
+Obs: Caso tenha problema paga rodar a aplicação com o Expo Go, através da rede Lan ou da rede Local, o problema mais comum, se trada do firewall, então é só liberar a porta na qual o expo startou a aplicação (no meu caso porta 19000 e 19001) nos protocolos TCP e UDP e ser feliz :D
 
 A aplicação pode ser acessada normalmente em [`localhost:19000`](http://localhost:19000). Mas é só conferir na página aberta após rodar `expo start`
 
