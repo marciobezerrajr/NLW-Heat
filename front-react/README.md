@@ -1,4 +1,4 @@
-<h1 align="center">NLW Heat - Node.js</h1>
+<h1 align="center">NLW Heat - React</h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
