@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Clone o repositório e acesse a pasta;
 - Instale as dependências com `yarn`;
-- Inicie o servidor no backend com `yarn dev` para carregar os dados no banco de dados e para que seja possível se logar pelo Github e enviar mensagens
+- Inicie o servidor no backend com `yarn dev` para carregar os dados no banco de dados e ser renderizado na tela e para que seja possível se logar pelo Github e enviar mensagens
 - Inicie o servidor no fron com o comando `yarn dev`;
 
 A aplicação pode ser acessada em [`localhost:3000`](http://localhost:3000).
