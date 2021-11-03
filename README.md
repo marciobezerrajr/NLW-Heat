@@ -38,6 +38,10 @@
 
 - Cada pasta desse repositório tem suas instruções em seu respectivo README.
 
+- [Backend](https://github.com/marciobezerrajr/NLW-Heat/tree/main/backend-node)
+- [FrontEnd](https://github.com/marciobezerrajr/NLW-Heat/tree/main/front-react)
+- [Mobile](https://github.com/marciobezerrajr/NLW-Heat/tree/main/mobile-reactnative)
+
 
 ## 📄 Licença
 
