@@ -32,7 +32,7 @@
 
 ## 🚀 Observações
 
-> Obs.: Nesse projeto temos autenticação via OAuth com o GitHub toda feita no backend. Alem disso, o backend é responsável por trazer os dados do banco SqLite, que serão renderizados tanto no front da aplicação web, quanto no aplicativo mobile. [Acesse aqui o backend-node](https://github.com/marciobezerrajr/NLW-Heat/tree/main/backend-node.). 
+> Obs.: Nesse projeto temos autenticação via OAuth com o GitHub toda feita no backend. Alem disso, o backend é responsável por trazer os dados do banco SqLite, que serão renderizados tanto no front da aplicação web, quanto no aplicativo mobile. [Acesse aqui o backend-node](https://github.com/marciobezerrajr/NLW-Heat/tree/main/backend-node). 
 
 > Alem disso, o projeto completo da RocketSeat ainda tem um microsserviço em Elixir o qual ainda não tive tempo de fazer, mas pode ser encontrado [aqui](https://github.com/rocketseat-education/nlw-heat-elixir).
 
